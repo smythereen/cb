@@ -1,0 +1,16 @@
+# UNIT.deps for cb
+# Evidence: #include <mem_io.h>, <map.h>, <tps.h>, <atomic_32.h>, <common.h>;
+# LIBRARIES = -lmio -lmsg -laddr -ltps -lmap -lsem -lfar -lnow -lsys
+# tps.h and -ltps come from the public tp unit (libtps.a is a symlink to libtp.a).
+# atomic is a direct header include (atomic_32.h), not only transitive via sys.
+base 1
+require mio
+require msg
+require addr
+require tp
+require map
+require sem
+require far
+require now
+require sys
+require atomic
